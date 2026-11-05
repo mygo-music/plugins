@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mygo-music.github.io/plugins/schema/plugin.schema.json",
+  "title": "MyGo Music plugin registry entry",
+  "description": "plugins/<id>.json. Everything else (name, description, icon, permissions, versions) is read from the plugin's own release.",
+  "type": "object",
+  "required": ["id", "repo"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,31}$",
+      "not": { "enum": ["mygo", "host", "core", "system", "local", "builtin", "dev"] }
+    },
+    "repo": {
+      "type": "string",
+      "description": "GitHub <owner>/<repo>.",
+      "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})/[A-Za-z0-9._-]{1,100}$"
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,23}$" }
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "For reviewers only. Not shown to users."
+    }
+  }
+}
