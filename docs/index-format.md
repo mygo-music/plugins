@@ -17,16 +17,16 @@ https://mygo-music.github.io/plugins/icons/<id>-<sha8>.png
   "generated_at": "2026-11-05T08:00:00Z",
   "plugins": [
     {
-      "id": "netease",
-      "name": "网易云音乐",
-      "description": "第三方网易云音乐来源:扫码登录、推荐、搜索、歌单、电台、播客。",
-      "i18n": { "en": { "name": "NetEase Cloud Music", "description": "..." } },
-      "icon": "icons/netease-1a2b3c4d.png",
-      "repo": "mygo-music/plugin-netease",
-      "tier": "official",
-      "license": "AGPL-3.0-only",
-      "authors": [{ "name": "MyGo Music", "github": "mygo-music" }],
-      "homepage": "https://github.com/mygo-music/plugin-netease",
+      "id": "example",
+      "name": "示例来源",
+      "description": "第三方示例来源:登录、推荐、搜索、歌单、电台。",
+      "i18n": { "en": { "name": "Example Source", "description": "..." } },
+      "icon": "icons/example-1a2b3c4d.png",
+      "repo": "example-org/plugin-example",
+      "tier": "community",
+      "license": "Apache-2.0",
+      "authors": [{ "name": "Example", "github": "example-org" }],
+      "homepage": "https://github.com/example-org/plugin-example",
       "tags": ["music", "podcast"],
       "capabilities": ["search", "stream", "..."],
       "features": ["like", "..."],
@@ -36,12 +36,12 @@ https://mygo-music.github.io/plugins/icons/<id>-<sha8>.png
           "version": "1.2.0",
           "api": 1,
           "min_host": "0.2.0",
-          "url": "https://github.com/mygo-music/plugin-netease/releases/download/v1.2.0/netease-1.2.0.mgp",
+          "url": "https://github.com/example-org/plugin-example/releases/download/v1.2.0/example-1.2.0.mgp",
           "sha256": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
           "size": 4194304,
           "permissions": {
-            "network": { "hosts": ["music.163.com"] },
-            "media": { "hosts": ["*.music.126.net"] }
+            "network": { "hosts": ["api.example.com"] },
+            "media": { "hosts": ["*.cdn.example.com"] }
           },
           "published_at": "2026-11-04T12:00:00Z"
         }
